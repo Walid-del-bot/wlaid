@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Go</title>
+    <style>
+      /*font-family: 'Gilroy'*/
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  width: 100%;
+  font-family: "Gilroy";
+}
+:root {
+  /* Colors, Gradients and font-sizes Are Here */
+  --lawngreenyello: liner-gradient(to right, lawngreen, yellow);
+  --redbluegradient: liner-gradient(to right, red, blue);
+  --redpinkgradient: liner-gradient(to right, red, pink);
+  --pinktolightpink: liner-gradient(to right, #ffafcc, #bde0fe);
+  --lightgreentolightblue: liner-gradient(to right, #76c893, #168aad);
+  --crimsoncolor: crimson;
+  --royalbluecolor: royalblue;
+  --lightsegreen: lightgreen;
+  --black: black;
+  --white: #fff;
+  --lawngreen: lawngreen;
+}
+#main{
+   width: 100%;
+   background-image: url("https://images.pexels.com/photos/9786/pexels-photo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+.head{
+   width: 100%;
+   min-height: 100vh;
+   /* background-color:#ffafcc; */
+}
+.headnav{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #168aad; */
+  padding: 0vw 5vw;
+}
+.icons{
+  display: none;
+}
+.heading{
+  font-size: 1.5vw;
+  font-weight: 900;
+}
+.heading span {
+  color: royalblue;
+  font-size: 5rem;
+}
+.navbar a{
+  font-size: 1.7vw;
+  font-weight: 500;
+  position: relative;
+}
+.navbar #a::after{
+  content: " ";
+  height: 2px;
+  position: absolute;
+  background-color: royalblue;
+  left: 0;
+  width: 0%;
+  transition: all .5s linear;
+  bottom: -3px;
+}
+.navbar #a:hover::after{
+  width: 100%;
+}
+#log_in{
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: all .5s linear;
+  color: #fff;
+  background-color: royalblue;
+}
+#log_in:hover{
+  color: royalblue;
+  background-color: transparent;
+}
+.navbar {
+  display: flex;
+  gap: 2.5vw;
+  align-items: center;
+}
+.main{
+  width: 100%;
+  display: flex;
+  height: calc( 100vh - 80px);
+}
+.left{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-main{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 0px 3vw;
+}
+.left-main h1{
+  font-size: 4vw;
+  font-weight: 900;
+}
+.left-main p{
+font-size: 1.2vw;
+font-weight: 400;
+}
+.left-main button {
+border: none;
+font-size: 1.5vw;
+font-weight: 600;
+letter-spacing: 1px;
+padding: .7vw 1.5vw;
+background-color: royalblue;
+color: #fff;
+transition: all .5s linear;
+cursor: pointer;
+}
+.left-main button:hover{
+  color: royalblue;
+  background-color: transparent;
+}
+.right{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-main{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4vw;
+}
+.right-main h1{
+  font-size: 4vw;
+}
+.right-main form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.right-main form p{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.right-main form #username{
+  padding: 5px 0px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.04);
+  border: none;
+}
+.right-main form #password{
+  padding: 5px 0px;
+  background-color: rgba(0,0,0,0.04);
+  text-align: center;
+  border: none;
+}
+.right-main form button{
+  border: none;
+  padding: 10px 7vw;
+  font-size: 2rem;
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+  transition: all .5s linear;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.right-main form button:hover{
+  color: royalblue;
+  background-color: transparent;
+}
+    </style>
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div class="head">
+         <div class="headnav">
+         <!-- child 1 -->
+        <a href="#" class="heading"><h1>Go<span>.</span></h1><a>
+          <!-- child 2-->
+        <nav class="navbar">
+          <a href="#" id="a">Home</a>
+          <a href="#" id="a">Blogs</a>
+          <a href="#" id="a">Posts</a>
+          <a href="#" id="log_in">Sign Up</a>
+        </nav>
+        <!-- child 3 -->
+        <div class="icons">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+      </div>
+      <div class="main">
+        <div class="left">
+          <div class="left-main">
+            <h1>I HAVE TO <span>LEARN</span> A LOT !</h1>
+            <p>
+              Lean is defined as a set of management practices to improve efficiency and effectiveness by eliminating waste. The core principle of lean is to reduce and eliminate non-value adding activities and waste.</p>
+            <button>Follow Me</button>
+          </div>
+        </div>
+        <div class="right">
+          <div class="right-main">
+            <h1>Let's Know !</h1>
+            <form>
+              <p>UserName : <input type="text" placeholder="Give UserName"  id="username"></p>
+              <p>PassWord : <input type="password" placeholder="Give PassWord"  id="password"></p>
+              <button>Log In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+   </div>
+    </div>
+  </body>
+</html>
